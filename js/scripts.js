@@ -6,8 +6,6 @@ function Player(turnTotal, finalTotal, id) {
 
 Player.prototype.diceRNGRoll = function(max = 7, min = 1) {
   var diceRoll = Math.floor(Math.random() * (max - min)) + min;
-  // Maybe make as a key to display in DOM
-  console.log("Dice roll: " + diceRoll);
   return diceRoll;
 }
 
@@ -45,6 +43,7 @@ $(document).ready(function() {
       $("#dice-roll1").text(newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll()));
       console.log(newPlayer1);
       if (newPlayer1.id === 0) {
+        $("#turn-total-view1").text("Turn total: " + newPlayer1.turnTotal);
         return newPlayer2.id = newPlayer2.id + 1;
       } else {
         $("#turn-total-view1").text("Turn total: " + newPlayer1.turnTotal);
@@ -55,6 +54,7 @@ $(document).ready(function() {
       $("#dice-roll2").text(newPlayer2.turnTotalHolder(newPlayer2.diceRNGRoll()));
       console.log(newPlayer1);
         if (newPlayer2.id === 0) {
+          $("#turn-total-view2").text("Turn total: " + newPlayer2.turnTotal);
           return newPlayer1.id = newPlayer1.id = 1;
         } else {
       $("#turn-total-view2").text("Turn total: " + newPlayer2.turnTotal);
