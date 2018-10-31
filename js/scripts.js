@@ -4,7 +4,9 @@ function UserData(turnTotal, finalTotal) {
 }
 
 UserData.prototype.diceRNG = function(max = 7, min = 1) {
-  return this.turnTotal = Math.floor(Math.random() * (max - min)) + min;
+  var diceRoll = Math.floor(Math.random() * (max - min)) + min;
+  console.log(diceRoll); // Turn into something the user can see
+  return this.turnTotal = diceRoll + this.turnTotal;
 }
 
 
