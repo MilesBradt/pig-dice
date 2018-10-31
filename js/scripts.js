@@ -6,7 +6,7 @@ function Player(turnTotal, finalTotal) {
 Player.prototype.diceRNGRoll = function(max = 7, min = 1) {
   var diceRoll = Math.floor(Math.random() * (max - min)) + min;
   // Maybe make as a key to display in DOM
-  console.log(diceRoll); // Turn into something the user can see
+  console.log(diceRoll);
   return diceRoll;
 }
 
@@ -17,8 +17,8 @@ Player.prototype.turnTotalHolder = function (diceRoll) {
 
 // newPlayer.finalTotalHolder(this.turnTotal);
 Player.prototype.finalTotalHolder = function() {
-  this.finalTotal = this.finalTotal + this.turnTotal;
   // Ask about this line
+  this.finalTotal = this.finalTotal + this.turnTotal;
 }
 
 var newPlayer = new Player(0, 0);
