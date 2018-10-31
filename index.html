@@ -9,20 +9,36 @@
     <title></title>
   </head>
   <body>
-    <button class="btn roll"type="button">Roll Dice</button>
-    <div id="output" class=" well output">
-      <h2 id="dice-roll1"></h2>
-      <br>
-      <p id="turn-total-view1"></p>
-      <p id="final-total-view1"></p>
-    </div>
-    <div id="output" class=" well output">
-      <h2 id="dice-roll2"></h2>
-      <br>
-      <p id="turn-total-view2"></p>
-      <p id="final-total-view2"></p>
-    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <p id="player1Rolled1">Next turn</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Player 1: </h2>
+          <div id="output" class=" well output">
+            <h2 id="dice-roll1"></h2>
+            <br>
+            <p>Turn Total: <span id="turn-total-view1"></span></p>
+            <p>Final Total: <span id="final-total-view1"></span></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2>Player 2: </h2>
+          <div id="output" class=" well output">
+            <h2 id="dice-roll2"></h2>
+            <br>
+            <p>Turn Total: <span id="turn-total-view2"></span></p>
+            <p>Final Total: <span id="final-total-view2"></span></p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <p id="player2Rolled1" >Next turn</p>
+        </div>
+      </div>
 
-    <button class ="btn hold" type="button" name="button">Hold</button>
+      <button class="btn roll"type="button">Roll Dice</button>
+      <button class ="btn hold" type="button" name="button">Hold</button>
+    </div>
   </body>
 </html>

@@ -1,5 +1,10 @@
 body {
   background-color: #2B2B2B;
+  color: #ADAAAD;
+}
+
+button {
+  color: #403F40;
 }
 
 .roll {
@@ -17,13 +22,28 @@ body {
 }
 
 .output {
-  margin-top: 25px;
+  /* margin-top: 25px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  color: #403F40;
   width: 250px;
   heigth: 250px;
 }
 
 #dice-roll {
   text-align: center;
+}
+
+#player1Rolled1 {
+  display: none;
+  margin-top: 75px;
+  font-size: 48px;
+  float: left;
+}
+
+#player2Rolled1 {
+  display: none;
+  margin-top: 75px;
+  font-size: 48px;
+  float: right;
 }
