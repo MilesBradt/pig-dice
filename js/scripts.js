@@ -42,7 +42,7 @@ var newPlayer2 = new Player(0, 0, 0);
 $(document).ready(function() {
   $(".roll").click(function() {
     if (newPlayer1.id === 1) {
-      $("#dice-roll-1").text(newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll()));
+      $("#dice-roll1").text(newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll()));
       console.log(newPlayer1);
       if (newPlayer1.id === 0) {
         return newPlayer2.id = newPlayer2.id + 1;
@@ -52,7 +52,7 @@ $(document).ready(function() {
       }
     }
     if (newPlayer2.id === 1) {
-      $("#dice-roll-2").text(newPlayer2.turnTotalHolder(newPlayer2.diceRNGRoll()));
+      $("#dice-roll2").text(newPlayer2.turnTotalHolder(newPlayer2.diceRNGRoll()));
       console.log(newPlayer1);
         if (newPlayer2.id === 0) {
           return newPlayer1.id = newPlayer1.id = 1;
@@ -67,12 +67,14 @@ $(document).ready(function() {
       newPlayer1.finalTotalHolder(this.turnTotal);
       $("#final-total-view1").text("Final Total: " + newPlayer1.finalTotal);
       newPlayer1.id = newPlayer1.id - 1;
-      return newPlayer2.id = newPlayer2.id + 1;
+      newPlayer2.id = newPlayer2.id + 1;
+      $("#turn-total-view1").text("Turn total: " + newPlayer2.turnTotal);
     } else if (newPlayer2.id === 1) {
       newPlayer2.finalTotalHolder(this.turnTotal);
       $("#final-total-view2").text("Final Total: " + newPlayer2.finalTotal);
       newPlayer2.id = newPlayer2.id - 1;
-      return newPlayer1.id = newPlayer1.id = 1;
+      newPlayer1.id = newPlayer1.id = 1;
+      $("#turn-total-view2").text("Turn total: " + newPlayer1.turnTotal);
     }
   })
 });
