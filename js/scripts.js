@@ -3,6 +3,21 @@ function Player(turnTotal, finalTotal) {
   this.finalTotal = finalTotal
 }
 
+function PlayerLog() {
+  this.players = [];
+  this.currentId = 0;
+}
+
+PlayerLog.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+}
+
+PlayerLog.prototype.arraysPlayers = function(player) {
+  player.id = this.assignId();
+  this.players.push(player);
+}
+
 Player.prototype.diceRNGRoll = function(max = 7, min = 1) {
   var diceRoll = Math.floor(Math.random() * (max - min)) + min;
   // Maybe make as a key to display in DOM
@@ -25,12 +40,14 @@ Player.prototype.finalTotalHolder = function() {
   this.finalTotal = this.finalTotal + this.turnTotal;
   if (this.finalTotal >= 100) {
     alert("You won yay")
-    // possible prototype reset
+    // Possible prototype reset
     return this.finalTotal = 0;
   }
 }
 
-var newPlayer = new Player(0, 99);
+var playerLog = new PlayerLog();
+var newPlayer1 = new Player(0, 0);
+var newPlayer2 = new Player(0, 0);
 
 $(document).ready(function() {
 

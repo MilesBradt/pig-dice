@@ -11,6 +11,8 @@ Specs:
 
   - Add 2nd player
 
+  - Add UI
+
   ------------
 
   Further Exploring:
