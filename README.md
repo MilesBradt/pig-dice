@@ -11,7 +11,15 @@ Specs:
 
   - Add 2nd player
 
-  - Add UI
+  - Add UI:
+    - Add roll button
+    - Display each dice roll
+    - Display turn turn total
+    - Add hold button
+    - Display final total 
+    - Add win text
+    _______
+    - Add 2nd player
 
   ------------
 

@@ -40,6 +40,8 @@ Player.prototype.turnTotalHolder = function (diceRoll) {
 Player.prototype.finalTotalHolder = function() {
   // Ask about this line
   this.finalTotal = this.finalTotal + this.turnTotal;
+  this.turnTotal = 0;
+  console.log(this.turnTotal);
   if (this.finalTotal >= 100) {
     alert("You won yay")
     // Possible prototype reset
@@ -53,11 +55,15 @@ var newPlayer2 = new Player(0, 0);
 
 $(document).ready(function() {
   $(".roll").click(function() {
-
     $("#dice-roll").text(newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll()));
     console.log(newPlayer1);
     $("#turn-total-view").text("Turn total: " + newPlayer1.turnTotal);
     // document.getElementById('output').innerHTML = newPlayer1.diceRNGRoll();
   })
 
+  $(".hold").click(function() {
+    newPlayer1.finalTotalHolder(this.turnTotal);
+    
+    $("#final-total-view").text("Final Total: " + newPlayer1.finalTotal);
+  })
 });

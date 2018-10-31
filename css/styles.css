@@ -9,6 +9,13 @@ body {
   margin-right: auto;
 }
 
+.hold {
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .output {
   margin-top: 25px;
   margin-left: auto;
