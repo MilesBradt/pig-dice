@@ -50,5 +50,9 @@ var newPlayer1 = new Player(0, 0);
 var newPlayer2 = new Player(0, 0);
 
 $(document).ready(function() {
+  $(".roll").click(function() {
+    $(".output").text(newPlayer1.diceRNGRoll());
+    // document.getElementById('output').innerHTML = newPlayer1.diceRNGRoll();
+  })
 
 });
