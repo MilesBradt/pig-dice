@@ -23,9 +23,14 @@ Player.prototype.turnTotalHolder = function (diceRoll) {
 Player.prototype.finalTotalHolder = function() {
   // Ask about this line
   this.finalTotal = this.finalTotal + this.turnTotal;
+  if (this.finalTotal >= 100) {
+    alert("You won yay")
+    // possible prototype reset
+    return this.finalTotal = 0;
+  }
 }
 
-var newPlayer = new Player(0, 0);
+var newPlayer = new Player(0, 99);
 
 $(document).ready(function() {
 
