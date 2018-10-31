@@ -9,36 +9,50 @@
     <title></title>
   </head>
   <body>
+    <div class="jumbotron">
+      <h1>Pig Dice</h1>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-md-2">
-          <p id="player1Rolled1">Next turn</p>
+          <p id="player1Rolled1">Player 1's turn</p>
         </div>
         <div class="col-md-4">
-          <h2>Player 1: </h2>
-          <div id="output" class=" well output">
-            <h2 id="dice-roll1"></h2>
+          <h2> <span class="player1 player1Glow">Player 1: </span></h2>
+          <div id="output" class="well output">
+            <h2 id="dice-roll1">Ready</h2>
             <br>
-            <p>Turn Total: <span id="turn-total-view1"></span></p>
-            <p>Final Total: <span id="final-total-view1"></span></p>
+            <p class="totals">This Turn: <span id="turn-total-view1"></span></p>
+            <p class="totals">Total: <span id="final-total-view1"></span></p>
           </div>
         </div>
         <div class="col-md-4">
-          <h2>Player 2: </h2>
+          <h2> <span class="player2 ">Player 2: </span></h2>
           <div id="output" class=" well output">
-            <h2 id="dice-roll2"></h2>
+            <h2 id="dice-roll2">Ready</h2>
             <br>
-            <p>Turn Total: <span id="turn-total-view2"></span></p>
-            <p>Final Total: <span id="final-total-view2"></span></p>
+            <p class="totals">This Turn: <span id="turn-total-view2"></span></p>
+            <p class="totals">Total: <span id="final-total-view2"></span></p>
           </div>
         </div>
         <div class="col-md-2">
-          <p id="player2Rolled1" >Next turn</p>
+          <p id="player2Rolled1">Player 2's turn</p>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-2">
 
-      <button class="btn roll"type="button">Roll Dice</button>
-      <button class ="btn hold" type="button" name="button">Hold</button>
+        </div>
+        <div class="col-md-8">
+          <!-- <button class="btn roll"type="button">Roll Dice</button> -->
+          <img class="roll" src="img/dice.png">
+          <br>
+          <button class ="btn hold" type="button" name="button">Hold</button>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+      </div>
     </div>
   </body>
 </html>

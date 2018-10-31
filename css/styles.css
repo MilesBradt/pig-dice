@@ -5,45 +5,81 @@ body {
 
 button {
   color: #403F40;
+  width: 100px;
 }
 
-.roll {
-  display: flex;
-  margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
+.jumbotron {
+  color: #ADAAAD;
+  background-color: #2B2B2B;
+  text-align: center;
+  font-size: 72px;
 }
 
 .hold {
-  display: flex;
   margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .output {
-  /* margin-top: 25px;
+  margin-top: 25px;
   margin-left: auto;
-  margin-right: auto; */
+  margin-right: auto;
   color: #403F40;
   width: 250px;
   heigth: 250px;
 }
 
-#dice-roll {
+.row {
+  text-align: center;
+}
+
+.roll {
+  width: 250px;
+}
+.roll:hover {
+  width: 250px;
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.player1Glow {
+  color: #EBE875;
+  font-weight: bold;
+  -webkit-transition: color 700ms linear;
+  -ms-transition: color 700ms linear;
+  transition: color 700ms linear;
+}
+
+.player2Glow {
+  color: #EBE875;
+  font-weight: bold;
+  -webkit-transition: color 700ms linear;
+  -ms-transition: color 700ms linear;
+  transition: color 700ms linear;
+}
+
+.totals {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#dice-roll1 {
+  text-align: center;
+}
+
+#dice-roll2 {
   text-align: center;
 }
 
 #player1Rolled1 {
   display: none;
+  text-align: center;
   margin-top: 75px;
-  font-size: 48px;
-  float: left;
+  font-size: 30px;
 }
 
 #player2Rolled1 {
   display: none;
+  text-align: center;
   margin-top: 75px;
-  font-size: 48px;
-  float: right;
+  font-size: 30px;
 }

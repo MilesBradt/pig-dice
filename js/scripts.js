@@ -43,8 +43,10 @@ $(document).ready(function() {
       var diceRoll = newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll())
       $("#dice-roll1").text(diceRoll);
       if (diceRoll === 1) {
-        $("#player1Rolled1").fadeIn(800, "linear");
-        $("#player1Rolled1").fadeOut(800, "linear");
+        $(".player2").addClass("player2Glow");
+        $(".player1").removeClass("player1Glow");
+        $("#player2Rolled1").fadeIn(800, "linear");
+        $("#player2Rolled1").fadeOut(400, "linear");
       }
       console.log(newPlayer1);
       if (newPlayer1.id === 0) {
@@ -59,8 +61,10 @@ $(document).ready(function() {
       var diceRoll = newPlayer2.turnTotalHolder(newPlayer2.diceRNGRoll())
       $("#dice-roll2").text(diceRoll);
       if (diceRoll === 1) {
-        $("#player2Rolled1").fadeIn(800, "linear");
-        $("#player2Rolled1").fadeOut(800, "linear");
+        $(".player1").addClass("player1Glow");
+        $(".player2").removeClass("player2Glow");
+        $("#player1Rolled1").fadeIn(800, "linear");
+        $("#player1Rolled1").fadeOut(400, "linear");
       }
       console.log(newPlayer1);
         if (newPlayer2.id === 0) {
@@ -79,15 +83,19 @@ $(document).ready(function() {
       newPlayer1.id = newPlayer1.id - 1;
       newPlayer2.id = newPlayer2.id + 1;
       $("#turn-total-view1").text(newPlayer2.turnTotal);
-      $("#player1Rolled1").fadeIn(800, "linear");
-      $("#player1Rolled1").fadeOut(800, "linear");
+      $(".player2").addClass("player2Glow")
+      $(".player1").removeClass("player1Glow")
+      $("#player2Rolled1").fadeIn(800, "linear");
+      $("#player2Rolled1").fadeOut(400, "linear");
     } else if (newPlayer2.id === 1) {
       newPlayer2.finalTotalHolder(this.turnTotal);
       $("#final-total-view2").text(newPlayer2.finalTotal);
       newPlayer2.id = newPlayer2.id - 1;
       newPlayer1.id = newPlayer1.id = 1;
-      $("#player2Rolled1").fadeIn(800, "linear");
-      $("#player2Rolled1").fadeOut(800, "linear");
+      $(".player1").addClass("player1Glow");
+      $(".player2").removeClass("player2Glow");
+      $("#player1Rolled1").fadeIn(800, "linear");
+      $("#player1Rolled1").fadeOut(400, "linear");
       $("#turn-total-view2").text(newPlayer1.turnTotal);
     }
   })
