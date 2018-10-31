@@ -42,7 +42,7 @@ button {
 }
 
 .player1Glow {
-  color: #EBE875;
+  color: #08A8A2;
   font-weight: bold;
   -webkit-transition: color 700ms linear;
   -ms-transition: color 700ms linear;
@@ -50,7 +50,7 @@ button {
 }
 
 .player2Glow {
-  color: #EBE875;
+  color: #08A8A2;
   font-weight: bold;
   -webkit-transition: color 700ms linear;
   -ms-transition: color 700ms linear;
