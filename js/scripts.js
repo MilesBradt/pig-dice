@@ -12,7 +12,11 @@ Player.prototype.diceRNGRoll = function(max = 7, min = 1) {
 
 // newPlayer.turnTotalHolder(newPlayer.diceRNGRoll());
 Player.prototype.turnTotalHolder = function (diceRoll) {
-  this.turnTotal = diceRoll + this.turnTotal;
+  if (diceRoll === 1) {
+    return this.turnTotal = 0;
+  } else {
+    this.turnTotal = diceRoll + this.turnTotal;
+  }
 }
 
 // newPlayer.finalTotalHolder(this.turnTotal);
