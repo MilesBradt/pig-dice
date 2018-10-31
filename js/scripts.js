@@ -21,16 +21,18 @@ PlayerLog.prototype.arraysPlayers = function(player) {
 Player.prototype.diceRNGRoll = function(max = 7, min = 1) {
   var diceRoll = Math.floor(Math.random() * (max - min)) + min;
   // Maybe make as a key to display in DOM
-  console.log(diceRoll);
+  console.log("Dice roll: " + diceRoll);
   return diceRoll;
 }
 
 // newPlayer.turnTotalHolder(newPlayer.diceRNGRoll());
 Player.prototype.turnTotalHolder = function (diceRoll) {
   if (diceRoll === 1) {
-    return this.turnTotal = 0;
+    this.turnTotal = 0;
+    return 1;
   } else {
     this.turnTotal = diceRoll + this.turnTotal;
+    return diceRoll;
   }
 }
 
@@ -51,7 +53,10 @@ var newPlayer2 = new Player(0, 0);
 
 $(document).ready(function() {
   $(".roll").click(function() {
-    $(".output").text(newPlayer1.diceRNGRoll());
+
+    $("#dice-roll").text(newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll()));
+    console.log(newPlayer1);
+    $("#turn-total-view").text("Turn total: " + newPlayer1.turnTotal);
     // document.getElementById('output').innerHTML = newPlayer1.diceRNGRoll();
   })
 

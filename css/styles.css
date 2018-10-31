@@ -15,5 +15,8 @@ body {
   margin-right: auto;
   width: 250px;
   heigth: 250px;
-  
+}
+
+#dice-roll {
+  text-align: center;
 }
