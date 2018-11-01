@@ -36,6 +36,7 @@ Player.prototype.finalTotalHolder = function() {
 
 var newPlayer1 = new Player(0, 0, 1);
 var newPlayer2 = new Player(0, 0, 0);
+var newCPU = new Player(0, 0, 0);
 
 $(document).ready(function() {
   $(".roll").click(function() {
@@ -76,6 +77,25 @@ $(document).ready(function() {
     }
   })
 
+  // $(".rollCPU").click(function() {
+  //   var diceRoll = newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll())
+  //   $("#dice-roll1").text(diceRoll);
+  //   if (diceRoll === 1) {
+  //     $(".player2").addClass("player2Glow");
+  //     $(".player1").removeClass("player1Glow");
+  //     $("#player2Rolled1").fadeIn(800, "linear");
+  //     $("#player2Rolled1").fadeOut(400, "linear");
+  //   }
+  //   console.log(newPlayer1);
+  //   if (newPlayer1.id === 0) {
+  //     $("#turn-total-view1").text(newPlayer1.turnTotal);
+  //     return newPlayer2.id = newPlayer2.id + 1;
+  //   } else {
+  //     $("#turn-total-view1").text(newPlayer1.turnTotal);
+  //     // document.getElementById('output').innerHTML = newPlayer1.diceRNGRoll();
+  //   }
+  // })
+
   $(".hold").click(function() {
     if (newPlayer1.id === 1) {
       newPlayer1.finalTotalHolder(this.turnTotal);
@@ -87,7 +107,7 @@ $(document).ready(function() {
       $(".player1").removeClass("player1Glow")
       $("#player2Rolled1").fadeIn(800, "linear");
       $("#player2Rolled1").fadeOut(400, "linear");
-      if (newPlayer1.finalTotal >= 10) {
+      if (newPlayer1.finalTotal >= 100) {
         newPlayer1.finalTotal = 0;
         newPlayer2.finalTotal = 0;
         $("#turn-total-view1").text(newPlayer1.turnTotal);;
@@ -110,11 +130,9 @@ $(document).ready(function() {
       $("#player1Rolled1").fadeIn(800, "linear");
       $("#player1Rolled1").fadeOut(400, "linear");
       $("#turn-total-view2").text(newPlayer1.turnTotal);
-      $("#dice-roll2").text("Winner");
-      $("#dice-roll1").text("Loser");
       newPlayer1.id = 1
       newPlayer2.id = 0
-      if (newPlayer2.finalTotal >= 10) {
+      if (newPlayer2.finalTotal >= 100) {
         newPlayer1.finalTotal = 0;
         newPlayer2.finalTotal = 0;
         $("#turn-total-view2").text(newPlayer2.turnTotal);;

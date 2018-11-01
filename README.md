@@ -16,7 +16,7 @@ Specs:
     - Display each dice roll
     - Display turn turn total
     - Add hold button
-    - Display final total 
+    - Display final total
     - Add win text
     _______
     - Add 2nd player
@@ -28,5 +28,9 @@ Specs:
   - Add multiple dice
 
   - Add AI to play against
+  - create computerPlayer
+  - automate computerPlayer's rolls
+  -
+  -
 
   - Easy mode/hard mode
