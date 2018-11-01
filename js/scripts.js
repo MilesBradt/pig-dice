@@ -82,6 +82,7 @@ $(document).ready(function() {
     $(".cpuOutput").toggle();
     $(".playerCPU").toggle();
     $(".rollCPU").show();
+    $(".cpuRolls").toggle();
     $(".hold").toggle();
     $(".holdCPU").toggle();
     $(".player2").toggle();
@@ -93,10 +94,6 @@ $(document).ready(function() {
     var diceRoll = newPlayer1.turnTotalHolder(newPlayer1.diceRNGRoll())
     $("#dice-roll1").text(diceRoll);
     $("#turn-total-view1").text(newPlayer1.turnTotal);
-    if (diceRoll === 1) {
-      $(".player2").addClass("player2Glow");
-      $(".player1").removeClass("player1Glow");
-    }
     console.log(newPlayer1);
     if (newPlayer1.id === 0) {
       $("#turn-total-view1").text(newPlayer1.turnTotal);
@@ -106,8 +103,7 @@ $(document).ready(function() {
       console.log(newPlayerCPU.turnTotal);
       $("#dice-rollCPU").text(diceRoll);
       if (diceRoll === 1) {
-        $(".playerCPU").addClass("playerCPUGlow");
-        $(".player1").removeClass("player1Glow");
+        $("#cpuRoll2").text("N/A")
         return newPlayer1.id = newPlayer1.id + 1;
       } else {
         var diceRoll = newPlayerCPU.turnTotalHolder(newPlayerCPU.diceRNGRoll())
@@ -119,8 +115,6 @@ $(document).ready(function() {
         console.log(newPlayerCPU.finalTotal);
         $("#final-total-viewCPU").text(newPlayerCPU.finalTotal);
         $("#dice-rollCPU").text(diceRoll);
-        $(".playerCPU").addClass("playerCPUGlow");
-        $(".player1").removeClass("player1Glow");
         return newPlayer1.id = newPlayer1.id + 1;
       }
     }
@@ -187,8 +181,6 @@ $(document).ready(function() {
         $("#cpuRoll1").text(diceRoll)
         $("#dice-rollCPU").text(diceRoll);
         if (diceRoll === 1) {
-          $(".playerCPU").addClass("playerCPUGlow");
-          $(".player1").removeClass("player1Glow");
           return newPlayer1.id = newPlayer1.id + 1;
         } else {
           var diceRoll = newPlayerCPU.turnTotalHolder(newPlayerCPU.diceRNGRoll())
@@ -199,8 +191,6 @@ $(document).ready(function() {
           console.log(newPlayerCPU.finalTotal);
           $("#final-total-viewCPU").text(newPlayerCPU.finalTotal);
           $("#dice-rollCPU").text(diceRoll);
-          $(".playerCPU").addClass("playerCPUGlow");
-          $(".player1").removeClass("player1Glow");
           return newPlayer1.id = newPlayer1.id + 1;
         }
       }
