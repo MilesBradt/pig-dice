@@ -87,6 +87,19 @@ $(document).ready(function() {
       $(".player1").removeClass("player1Glow")
       $("#player2Rolled1").fadeIn(800, "linear");
       $("#player2Rolled1").fadeOut(400, "linear");
+      if (newPlayer1.finalTotal >= 10) {
+        newPlayer1.finalTotal = 0;
+        newPlayer2.finalTotal = 0;
+        $("#turn-total-view1").text(newPlayer1.turnTotal);;
+        $("#final-total-view1").text(newPlayer1.finalTotal);
+        $("#final-total-view2").text(newPlayer2.finalTotal);
+        $("#dice-roll1").text("Winner");
+        $("#dice-roll2").text("Loser");
+        $(".player1").addClass("player1Glow");
+        $(".player2").removeClass("player2Glow");
+        newPlayer1.id = 1
+        newPlayer2.id = 0
+      }
     } else if (newPlayer2.id === 1) {
       newPlayer2.finalTotalHolder(this.turnTotal);
       $("#final-total-view2").text(newPlayer2.finalTotal);
@@ -97,6 +110,21 @@ $(document).ready(function() {
       $("#player1Rolled1").fadeIn(800, "linear");
       $("#player1Rolled1").fadeOut(400, "linear");
       $("#turn-total-view2").text(newPlayer1.turnTotal);
+      $("#dice-roll2").text("Winner");
+      $("#dice-roll1").text("Loser");
+      newPlayer1.id = 1
+      newPlayer2.id = 0
+      if (newPlayer2.finalTotal >= 10) {
+        newPlayer1.finalTotal = 0;
+        newPlayer2.finalTotal = 0;
+        $("#turn-total-view2").text(newPlayer2.turnTotal);;
+        $("#final-total-view1").text(newPlayer1.finalTotal);
+        $("#final-total-view2").text(newPlayer2.finalTotal);
+        $("#dice-roll2").text("Winner");
+        $("#dice-roll1").text("Loser");
+        newPlayer1.id = 1
+        newPlayer2.id = 0
+      }
     }
   })
 });
