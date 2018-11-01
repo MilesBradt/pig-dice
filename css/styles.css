@@ -62,6 +62,29 @@ button {
   font-weight: bold;
 }
 
+.cpuOutput {
+  display: none;
+}
+
+.playerCPU {
+  display: none;
+}
+
+.rollCPU {
+  display: none;
+  width: 250px;
+}
+
+.cpuRolls {
+  text-align: center;
+  font-size: 30px;
+}
+
+.holdCPU {
+  display: none;
+  background-color: #DFDFDF;
+}
+
 #dice-roll1 {
   text-align: center;
 }

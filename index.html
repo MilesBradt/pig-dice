@@ -28,15 +28,25 @@
         </div>
         <div class="col-md-4">
           <h2><span class="player2 ">Player 2: </span></h2>
-          <div id="output" class=" well output">
+          <div id="output" class="well output player2Output">
             <h2 id="dice-roll2">Ready</h2>
             <br>
             <p class="totals">This Turn: <span id="turn-total-view2"></span></p>
             <p class="totals">Total: <span id="final-total-view2"></span></p>
           </div>
+
+            <h2><span class="playerCPU ">CPU: </span></h2>
+            <div id="output" class="well output cpuOutput">
+              <h2 id="dice-rollCPU">Ready</h2>
+              <br>
+              <p class="totals">This Turn: <span id="turn-total-viewCPU"></span></p>
+              <p class="totals">Total: <span id="final-total-viewCPU"></span></p>
+          </div>
         </div>
         <div class="col-md-2">
           <p id="player2Rolled1">Player 2's turn</p>
+          <p class='cpuRolls'>Roll 1: <span id="cpuRoll1"></span></p>
+          <p class='cpuRolls'>Roll 2: <span id="cpuRoll2"></span></p>
         </div>
       </div>
       <div class="row">
@@ -45,10 +55,13 @@
         <div class="col-md-8">
           <!-- <button class="btn roll"type="button">Roll Dice</button> -->
           <img class="roll" src="img/dice.png" alt="roll">
+          <img class="rollCPU" src="img/dice.png" alt="roll">
           <br>
           <button class ="btn hold" type="button" name="button">Hold</button>
+          <button class ="btn holdCPU" type="button" name="button">Hold</button>
         </div>
         <div class="col-md-2">
+          <button class ="btn CPU" type="button" name="button">CPU?</button>
         </div>
       </div>
     </div>
